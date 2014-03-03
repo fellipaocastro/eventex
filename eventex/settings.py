@@ -24,7 +24,7 @@ SECRET_KEY = config('SECRET_KEY', default='q=ny)9z8g)-9z3-!ls)h2e(kyg+3%g&*%3%mq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = ['.localhost', '127.0.0.1', '.herokuapp.com']
 
