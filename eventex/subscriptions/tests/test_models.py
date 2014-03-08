@@ -1,7 +1,9 @@
 # coding: utf-8
+from datetime import datetime
+
 from django.test import TestCase
 from django.db import IntegrityError
-from datetime import datetime
+
 from eventex.subscriptions.models import Subscription
 
 
