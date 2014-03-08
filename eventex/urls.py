@@ -9,7 +9,7 @@ urlpatterns = patterns(
     '',
     url(
         r'^inscricao/',
-        include('eventex.subscriptions.urls', namespace='subscription')
+        include('eventex.subscriptions.urls', namespace='subscriptions')
     ),
     url(r'^admin/', include(admin.site.urls)),
     url(r'', include('eventex.core.urls', namespace='core')),
