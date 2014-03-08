@@ -8,10 +8,10 @@ from eventex.subscriptions.models import Subscription
 class SubscriptionTest(TestCase):
     def setUp(self):
         self.obj = Subscription(
-                name='Fellipe Castro',
-                cpf='12345678901',
-                email='contact@fellipecastro.com',
-                phone='21-996186180'
+            name='Fellipe Castro',
+            cpf='12345678901',
+            email='contact@fellipecastro.com',
+            phone='21-996186180'
         )
 
     def test_create(self):
@@ -31,17 +31,29 @@ class SubscriptionTest(TestCase):
 class SubscriptionUniqueTest(TestCase):
     def setUp(self):
         # Create a first entry to force the collision
-        Subscription.objects.create(name='Fellipe Castro', cpf='12345678901',
-                                    email='contact@fellipecastro.com', phone='21-996186180')
+        Subscription.objects.create(
+            name='Fellipe Castro',
+            cpf='12345678901',
+            email='contact@fellipecastro.com',
+            phone='21-996186180'
+        )
 
     def test_cpf_unique(self):
         'CPF must be unique'
-        s = Subscription(name='Fellipe Castro', cpf='12345678901',
-                                    email='uruguay@fellipecastro.com', phone='21-996186180')
+        s = Subscription(
+            name='Fellipe Castro',
+            cpf='12345678901',
+            email='uruguay@fellipecastro.com',
+            phone='21-996186180'
+        )
         self.assertRaises(IntegrityError, s.save)
 
     def test_email_unique(self):
         'Email must be unique'
-        s = Subscription(name='Fellipe Castro', cpf='00000000011',
-                                    email='contact@fellipecastro.com', phone='21-996186180')
+        s = Subscription(
+            name='Fellipe Castro',
+            cpf='00000000011',
+            email='contact@fellipecastro.com',
+            phone='21-996186180'
+        )
         self.assertRaises(IntegrityError, s.save)

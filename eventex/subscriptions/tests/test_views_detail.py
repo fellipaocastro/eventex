@@ -5,8 +5,12 @@ from eventex.subscriptions.models import Subscription
 
 class DetailTest(TestCase):
     def setUp(self):
-        s = Subscription.objects.create(name='Fellipe Castro', cpf='12345678901',
-                                        email='contact@fellipecastro.com', phone='21-996186180')
+        s = Subscription.objects.create(
+            name='Fellipe Castro',
+            cpf='12345678901',
+            email='contact@fellipecastro.com',
+            phone='21-996186180'
+        )
         self.resp = self.client.get('/inscricao/%d/' % s.pk)
 
     def test_get(self):
@@ -15,7 +19,10 @@ class DetailTest(TestCase):
 
     def test_template(self):
         'Uses template'
-        self.assertTemplateUsed(self.resp, 'subscriptions/subscription_detail.html')
+        self.assertTemplateUsed(
+            self.resp,
+            'subscriptions/subscription_detail.html'
+        )
 
     def test_context(self):
         'Context must have a subscription instance.'

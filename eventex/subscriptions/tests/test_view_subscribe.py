@@ -14,7 +14,10 @@ class SubscribeTest(TestCase):
 
     def test_template(self):
         'Response should be a rendered template.'
-        self.assertTemplateUsed(self.resp, 'subscriptions/subscription_form.html')
+        self.assertTemplateUsed(
+            self.resp,
+            'subscriptions/subscription_form.html'
+        )
 
     def test_html(self):
         'Html must contain input controls.'
