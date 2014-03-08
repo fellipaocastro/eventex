@@ -12,5 +12,6 @@ pep8==1.4.6
 psycopg2==2.5.2
 pyflakes==0.7.3
 pystache==0.5.3
+readline==6.2.4.1
 static==1.0.2
 wsgiref==0.1.2
