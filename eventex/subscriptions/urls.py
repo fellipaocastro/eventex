@@ -5,5 +5,5 @@ from django.conf.urls import patterns, url
 urlpatterns = patterns(
     'eventex.subscriptions.views',
     url(r'^$', 'subscribe', name='subscribe'),
-    url(r'^(\d+)/$', 'detail', name='detail'),
+    url(r'^(?P<pk>\d+)/$', 'detail', name='detail'),
 )

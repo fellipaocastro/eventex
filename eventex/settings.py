@@ -31,6 +31,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'south',
     'eventex.core',
     'eventex.subscriptions',
 )
@@ -55,7 +56,7 @@ DATABASES = {
         cast=db_url),
 }
 
-LANGUAGE_CODE = 'pt-br'
+LANGUAGE_CODE = 'pt-BR'
 
 TIME_ZONE = 'America/Sao_Paulo'
 
@@ -68,3 +69,5 @@ USE_TZ = True
 STATIC_ROOT = BASE_DIR.child('staticfiles')
 
 STATIC_URL = '/static/'
+
+SOUTH_TESTS_MIGRATE = False
