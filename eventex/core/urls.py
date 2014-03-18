@@ -11,4 +11,5 @@ urlpatterns = patterns(
         name='speaker_detail'
     ),
     url(r'^palestras/$', 'talk_list', name='talk_list'),
+    url(r'^palestras/(?P<pk>\d+)/$', 'talk_detail', name='talk_detail'),
 )
