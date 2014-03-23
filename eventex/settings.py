@@ -34,6 +34,7 @@ INSTALLED_APPS = (
     'south',
     'eventex.core',
     'eventex.subscriptions',
+    'eventex.myauth',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -71,3 +72,5 @@ STATIC_ROOT = BASE_DIR.child('staticfiles')
 STATIC_URL = '/static/'
 
 SOUTH_TESTS_MIGRATE = False
+
+AUTH_USER_MODEL = 'myauth.User'
