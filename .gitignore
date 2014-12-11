@@ -10,6 +10,6 @@ Scripts
 *.pyc
 *~
 *.sqlite3
-.DS_Store
+*.DS_Store
 .env
 eventex/staticfiles
